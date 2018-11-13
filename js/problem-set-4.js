@@ -46,7 +46,10 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
+  let far;
+  var op3 = document.getElementById("output3")
+  far = ((cels * 1.8) + 32).toFixed(2);
+  op3.innerHTML = (cels + " degrees Celsius equals " + far + " degrees Fahrenheit.")
 
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
