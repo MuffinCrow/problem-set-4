@@ -96,7 +96,14 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 5 CODE HERE
+  let mile;
+  let yard;
+  let feet;
+  var op5 = document.getElementById("output5");
+  mile = (inches / 63360).toFixed(0);
+  yard = (inches / 36).toFixed(0);
+  feet = (inches / 12).toFixed(0);
+  op5.innerHTML = ("Miles: " + mile + " </br>Yards: " + yard + "</br>feet: " + feet + "</br>Inches: " + inches);
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
