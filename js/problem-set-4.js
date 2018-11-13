@@ -24,7 +24,9 @@ function helloAgain() {
   // Use the name variable declared above to store the user's response. You
   // do not need to re-declare it, only assign it a value.
 
-  // WRITE YOUR EXERCISE 2 CODE HERE
+  var op2 = document.getElementById("output2")
+  name = prompt ("What is your name?")
+  op2.innerHTML = ("Hello, " + name + "!")
 
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
