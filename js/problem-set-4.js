@@ -161,7 +161,7 @@ function fluidOunces() {
   let pint = Math.floor(fluidOunces % 128 % 32 / 16);
   let cup = Math.floor(fluidOunces % 128 % 32 % 16 / 8);
   let oz = Math.floor(fluidOunces % 128 % 32 % 16 % 8);
-  op7.innerHTML = (`Gallons: ${gallon}${br}Quarts: ${quart}${br}Pints: ${pint}${br}Quarts: ${quart}${br}Pints: ${pint}`);
+  op7.innerHTML = (`Gallons: ${gallon}${br}Quarts: ${quart}${br}Pints: ${pint}${br}Cups: ${cup}${br}Fluid Ounces: ${oz}`);
 
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
@@ -185,7 +185,12 @@ function ounces() {
   let ounces = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 8 CODE HERE
+  let br = "</br>"
+  var op8 = document.getElementById("output8");
+  let ton = Math.floor(ounces / 32000);
+  let lb = Math.floor(ounces % 32000 / 16);
+  let oz = Math.floor(ounces % 32000 % 16);
+  op8.innerHTML = (`Tons: ${ton}${br}Pounds: ${lb}${br}Ounces: ${oz}`);
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
@@ -209,7 +214,14 @@ function money() {
   let pennies = input; // DO NOT MODIFY
   /////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 9 CODE HERE
+  let br = "</br>"
+  var op9 = document.getElementById("output9");
+  let dollar = Math.floor(pennies / 100);
+  let quarter = Math.floor(pennies % 100 / 25);
+  let dime = Math.floor(pennies % 100 % 25 / 10);
+  let nickel = Math.floor(pennies % 100 % 25 % 10 / 5);
+  let penny = Math.floor(pennies % 100 % 25 % 10 % 5);
+  op9.innerHTML = (`Dollars: ${dollar}${br}Quarters: ${quarter}${br}Dimes: ${dime}${br}Nickels: ${nickel}${br}Pennies: ${penny}`);
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
@@ -233,7 +245,14 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 10 CODE HERE
+  let br = "</br>"
+  var opa1 = document.getElementById("output10");
+  let quarter = Math.floor((amount / 25) * 10);
+  let dime = Math.floor((amount % 25 / 10) * 10);
+  let nickel = Math.floor((amount % 25 % 10 / 5) * 10);
+  let penny = Math.floor((amount % 25 % 10 % 5) * 10);
+  let coins = Math.floor(parseInt(quarter) + parseInt(dime) + parseInt(nickel) + parseInt(penny));
+  opa1.innerHTML = (`${coins} coins.`);
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
