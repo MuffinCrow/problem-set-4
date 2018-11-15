@@ -247,10 +247,10 @@ function change() {
 
   let br = "</br>"
   var opa1 = document.getElementById("output10");
-  let quarter = Math.floor((amount / 25) * 10);
-  let dime = Math.floor((amount % 25 / 10) * 10);
-  let nickel = Math.floor((amount % 25 % 10 / 5) * 10);
-  let penny = Math.floor((amount % 25 % 10 % 5) * 10);
+  let quarter = Math.floor(amount * 100 / 25);
+  let dime = Math.floor(amount * 100 % 25 / 10);
+  let nickel = Math.floor(amount * 100 % 25 % 10 / 5);
+  let penny = Math.floor(amount * 100 % 25 % 10 % 5);
   let coins = Math.floor(parseInt(quarter) + parseInt(dime) + parseInt(nickel) + parseInt(penny));
   opa1.innerHTML = (`Quarters: ${quarter} Dimes: ${dime} Nickels: ${nickel} Pennies: ${penny}`);
 
