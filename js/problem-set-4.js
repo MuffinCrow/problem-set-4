@@ -95,15 +95,13 @@ function inches() {
   ////////////////////// DO NOT MODIFY
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
-
-  let mile;
-  let yard;
-  let feet;
+  let br = "</br>"
   var op5 = document.getElementById("output5");
-  mile = (inches / 63360).toFixed(0);
-  yard = (inches / 36).toFixed(0);
-  feet = (inches / 12).toFixed(0);
-  op5.innerHTML = ("Miles: " + mile + " </br>Yards: " + yard + "</br>feet: " + feet + "</br>Inches: " + inches);
+  let mile = Math.floor(inches / 63360);
+  let yard = Math.floor(inches % 63360 / 36);
+  let feet = Math.floor(inches % 63360 % 36 / 12);
+  let inch = Math.floor(inches % 63360 % 36 % 12);
+  op5.innerHTML = (`Miles: ${mile}${br}Yards: ${yard}${br}Feet: ${feet}${br}Inches: ${inch}`);
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
@@ -127,7 +125,12 @@ function centimeters() {
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 6 CODE HERE
+  let br = "</br>"
+  var op6 = document.getElementById("output6");
+  let kilometer = Math.floor(centimeters / 100000);
+  let meter = Math.floor(centimeters % 100000 / 100);
+  let cent = Math.floor(centimeters % 100000 % 100);
+  op6.innerHTML = (`Kilometers: ${kilometer}${br}Meters: ${meter}${br}Centimeters: ${cent}`);
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
@@ -151,7 +154,14 @@ function fluidOunces() {
   let fluidOunces = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 7 CODE HERE
+  let br = "</br>"
+  var op7 = document.getElementById("output7");
+  let gallon = Math.floor(fluidOunces / 128);
+  let quart = Math.floor(fluidOunces % 128 / 32);
+  let pint = Math.floor(fluidOunces % 128 % 32 / 16);
+  let cup = Math.floor(fluidOunces % 128 % 32 % 16 / 8);
+  let oz = Math.floor(fluidOunces % 128 % 32 % 16 % 8);
+  op7.innerHTML = (`Gallons: ${gallon}${br}Quarts: ${quart}${br}Pints: ${pint}${br}Quarts: ${quart}${br}Pints: ${pint}`);
 
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
