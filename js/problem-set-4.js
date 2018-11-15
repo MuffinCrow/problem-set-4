@@ -252,7 +252,7 @@ function change() {
   let nickel = Math.floor(amount * 100 % 25 % 10 / 5);
   let penny = Math.floor(amount * 100 % 25 % 10 % 5);
   let coins = Math.floor(parseInt(quarter) + parseInt(dime) + parseInt(nickel) + parseInt(penny));
-  opa1.innerHTML = (`Quarters: ${quarter} Dimes: ${dime} Nickels: ${nickel} Pennies: ${penny}`);
+  opa1.innerHTML = (`${coins} coins.`);
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
